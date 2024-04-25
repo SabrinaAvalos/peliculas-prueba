@@ -1,0 +1,272 @@
+/* PRIMERO hay que pensar que tamaño le voy a dar, en este caso "mobile first" */
+
+/*ESTILOS generales (de toda mi pág): tamaños, botones, tipo de letra, etc.*/
+
+*{
+  box-sizing: border-box; /*esto es para que todos los bordes, margenes que modifique no crezcan más del tamaño mobile que quiero*/
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth; /*para que se vea mas fluido cuando va a un link interno*/
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+h1{ font-size: 2.0em;}
+h2{ font-size: 1.3em;}
+h4{ font-size: 1.8em;}
+p{ font-size: 1.0em;}
+
+
+
+button {
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 08px 12px; /*padding para el espacio de las palabras adentro del boton, como un borde*/
+  border: 1.9px solid rgb(0, 0, 0, 0.5); /*tambien puedo poner pink, red, etc.*/
+  /* box-shadow: 2px 2px 2px; -----(no le voy a poner esta vez) sombra: 20de x, 20 de y, 10 de profundidad*/
+  color: white;
+  background-color: brown;
+}
+
+button:hover{
+  background-color:black; /*hover para que al pasar el cursor cambie el color*/
+}
+
+.container { /*(Es para que cuando agrande la pantalla mas de los 1400px, las cosas dentro de él se empiecen a centrar y no queden en el márgen)*/
+  max-width: 1400px;
+  margin: auto;
+}
+/*FIN estilos generales (de toda mi pág): tamaños, botones, tipo de letra, etc.*/
+
+/*ESTILOS del header*/
+header{
+  background-color:brown;
+}
+
+header .logo{
+  margin: 0; /*para sacarle el márgen de arriba al header*/
+  padding: 10px 30px; /*25 para arriba y abajo, 30 para los costados*/
+  font-weight: bold;
+  font-size: 1.0em;
+  color:white;
+ 
+ 
+}
+
+header .container{ /* -header (espacio y punto)."variable"- para llamar a cualquier variable declarada dentro de una misma seccion, en este caso es el header.*/
+   display: flex;
+   flex-direction: column;/*para que se ordene en una columna*/
+   align-items: center; /*los centra orizontalmente*/
+   padding: 0.5px 15px;
+
+}
+
+header nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a{
+  padding: 5px 10px; /* para que cuando extienda la pagina me aparezcan uno al lado del otro*/
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color:brown; /*le pongo fondo para que quede al mismo nivel del iniciar sesion*/
+}
+
+.iniciaryadm{
+  background-color:black;
+  color:white;
+  padding: 5px 5px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+header a:hover{
+  color: black;
+}
+.iniciaryadm:hover{
+  color: brown;
+}
+
+/*FIN del header*/
+
+/*ESTILO para la sección principal, imagen de fondo con letras arriba*/
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh; /*para que ocupe el 90% de mi pantalla*/
+  color: white;
+  background-image: 
+  linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) /*Esto es para que se ponga un filtro degrade en la img y se vea mejor el texto*/
+  ,url("Img/netflix1.webp");
+  background-repeat: no-repeat; /*para que no aparezca doble img abajo*/
+  background-size: cover; /*para que ocupe todo el espacio disponible*/
+  background-position: center center; /*para que centre siempre la img*/
+}
+/*FIN estilo para la sección principal, imagen de fondo con letras arriba*/
+
+/*ESTILO section "buscar"*/
+#buscar{
+  background-color:brown;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  flex-direction: column; /*importante para que se vea en columna y no al lado*/
+  padding: 20px 10px;
+
+}
+
+#buscar button{
+  border-radius: 20px;
+}
+/* FIN estilo de la section "buscar" */
+
+/* ESTILOS para la sección de "Las tendencias de hoy"*/
+.color-acento{color: brown;} /*para cambiar el color de una sola palabra ej: "las TENDENCIAS de hoy"*/
+
+#tendencias .container{
+
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  flex-direction: column; /*importante para que se vea en columna y no al lado*/
+  padding: 20px 10px;
+  font-weight: bold;
+
+}
+
+.peliculas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:60px;
+  }
+
+#tendencias img{
+  height:250px; width:200px; 
+  border-radius: 15%;
+  margin: 10px;
+}
+
+  /* FIN estilos para la sección de "Las tendencias de hoy"*/
+
+/* ESTILO para los botones "anterior y siguiente"*/
+.boton{
+  border-radius: 20px;
+  margin: 10px;
+}
+/*FN estilo*/
+
+
+/*ESTILOS generales para la section "las más aclamadas"*/
+#aclamadas .container{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  flex-direction: column; /*importante para que se vea en columna y no al lado*/
+  padding: 20px 10px;
+
+}
+
+#aclamadas img{ /*editar las img de esta sección*/
+  height:250px; width:200px; 
+  border-radius: 15%;
+  margin: 10px;
+
+}
+/*FIN estilos para section "las mas aclamadas"*/
+
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /*importante para que se vea en columna, en el medio y no al lado*/
+  padding: 25px 30px;
+  background-color:brown;
+}
+
+footer nav{
+  text-align: center;
+  font-size: 0.8em;
+}
+
+footer a{
+  padding: 5px 20px; /* para que cuando extienda la pagina me aparezcan uno al lado del otro*/
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: brown;
+}
+
+footer a:hover{
+  color: black;
+}
+
+
+/* VERSION ESCRITORIOOOO*/
+
+
+@media (min-width:720px)
+{ /*Cuando la pantalla supere los 720px se van a aplicar los sig. estilos (es para version escritorio)*/
+
+  header .container{
+    flex-direction: row;
+    justify-content: space-between; /*para que se separen y el nav quede a la derecha (no se usa el text-align:center)*/
+    padding: 20px 15px;
+    font-size: 1em;
+  }
+
+  header{
+    position:fixed; /*para que se quede fijo cuando bajo. Siempre hay que agregarle el width*/
+    width: 100%;
+  }
+
+  header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    text-align: right;
+    font-size: 1em;
+  }
+  
+ #hero h1{
+    font-size: 4em;
+  }
+#hero p{
+  font-size: 2.0em;
+}
+#hero button{
+  padding: 15px 15px;
+  font-size: 1em;
+}
+#tendencias h2{
+  padding: 25px 20px;
+}
+
+#tendencias img{
+  height:350px; width:300px; 
+  border-radius: 15%;
+  margin: 10px;
+  text-align: center;
+}
+
+footer nav{
+  text-align: center;
+  font-size: 1em;
+
+}
+}
